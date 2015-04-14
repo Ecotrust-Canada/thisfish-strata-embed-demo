@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Strata by HTML5 UP</title>
+		<title>ThisFish Widget Demo</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -50,46 +50,26 @@
 
 
 
+<!-- ThisFish embedded results -->
+<div style="width:415px;" id="enter_code"></div>
+<br style="clear:both">
+<div id='trace_display' height="100%" width="100%"></div>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>    
-	var _host = "thisfish.info";
+  
+	var host = (window.location.hash + '').replace("#","") || "thisfish.info";
 
-	function get_trace()
-	{  //get the trace results from the server and display locally
-
-	  var search_code = $("input#code").val();
-	 
-	  var request = $.ajax({
-	    url: "http://" + _host + "/api/trace_event/?code="+search_code,
-	    callback: "localJsonpCallback",
-	    jsonpCallback: "localJsonpCallback",
-	     // Tell jQuery we're expecting JSONP
-	    dataType: "jsonp"
-	  });
-	   
-	}
-
-	function localJsonpCallback(rendered_trace_page) {
-			console.log(_host);
-	    $("#enter_code").hide(); // hide the input search box
-	    $("#trace_display").html( rendered_trace_page); //display the search results
-	    $("#trace_display").find("img").each(function(){
-	    	console.log($(this).attr("src"));
-	    	var src = $(this).attr("src");
-	    	if (src.indexOf(_host) == -1) {
-	    		var new_src = "http://"+_host + "/" + src.replace(/\.\.\//g,"");
-	    		$(this).attr("src", new_src);
-	    		console.log('change to', new_src);
-	    	}
-	    }) 
-	}
+  $(function(){
+	  var s = document.createElement("script");
+	  s.src = "http://"+host+"/media/img/embed_results/embed.js";
+	  $("#enter_code").append(s);
+	  console.log(s);
+  });
 
 </script> 
-<div style="width:415px;" id="enter_code" >
-  <script type="text/javascript" language="javascript" src="http://thisfish.info/media/img/tr_widget/get_trace_widget.js"></script>
-</div><br style="clear:both">
-<!-- Display search results here  -->
-<div id='trace_display' height="100%" width="100%"></div>
+<!-- End ThisFish embedded results  -->
+
 
 
 
