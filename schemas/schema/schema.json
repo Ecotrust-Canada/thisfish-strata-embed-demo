@@ -1,157 +1,611 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://jsonschema.net",
   "type": "object",
   "properties": {
-    "vessel_name": {
-      "id": "http://jsonschema.net/vessel_name",
-      "type": "string"
+    "fh": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "image": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "province": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string"
+        },
+        "personal_intro": {
+          "type": "string"
+        },
+        "home_port": {
+          "type": "string"
+        },
+        "year_established": {
+          "type": "integer"
+        },
+        "phone_primary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "image",
+        "country",
+        "province",
+        "city",
+        "personal_intro",
+        "home_port",
+        "year_established",
+        "phone_primary"
+      ]
     },
-    "vessel_permit_number": {
-      "id": "http://jsonschema.net/vessel_permit_number",
-      "type": "integer"
+    "fish": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "name_fr": {
+          "type": "string"
+        },
+        "scientific_name": {
+          "type": "string"
+        },
+        "other_names": {
+          "type": "string"
+        },
+        "other_names_fr": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        },
+        "background_fr": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "drawing": {
+          "type": "string"
+        },
+        "scientific_image": {
+          "type": "string"
+        },
+        "thumbnail": {
+          "type": "string"
+        },
+        "range_pic": {
+          "type": "string"
+        },
+        "average_weight": {
+          "type": "string"
+        },
+        "average_price": {
+          "type": "null"
+        },
+        "quality": {
+          "type": "string"
+        },
+        "quality_fr": {
+          "type": "string"
+        },
+        "nutri_info": {
+          "type": "string"
+        },
+        "nutri_info_fr": {
+          "type": "string"
+        },
+        "tasting_notes_brief": {
+          "type": "string"
+        },
+        "tasting_notes_brief_fr": {
+          "type": "string"
+        },
+        "tasting_notes_full": {
+          "type": "string"
+        },
+        "tasting_notes_full_fr": {
+          "type": "string"
+        },
+        "guide": {
+          "type": "string"
+        },
+        "guide_fr": {
+          "type": "string"
+        },
+        "fun_facts": {
+          "type": "string"
+        },
+        "fun_facts_fr": {
+          "type": "string"
+        },
+        "life_history": {
+          "type": "string"
+        },
+        "life_history_fr": {
+          "type": "string"
+        },
+        "public_list": {
+          "type": "boolean"
+        },
+        "default_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "slug",
+        "name_fr",
+        "scientific_name",
+        "other_names",
+        "other_names_fr",
+        "background",
+        "background_fr",
+        "image",
+        "drawing",
+        "scientific_image",
+        "thumbnail",
+        "range_pic",
+        "average_weight",
+        "average_price",
+        "quality",
+        "quality_fr",
+        "nutri_info",
+        "nutri_info_fr",
+        "tasting_notes_brief",
+        "tasting_notes_brief_fr",
+        "tasting_notes_full",
+        "tasting_notes_full_fr",
+        "guide",
+        "guide_fr",
+        "fun_facts",
+        "fun_facts_fr",
+        "life_history",
+        "life_history_fr",
+        "public_list",
+        "default_state"
+      ]
     },
-    "vendor_id": {
-      "id": "http://jsonschema.net/vendor_id",
-      "type": "integer"
-    },
-    "vendor_software_version": {
-      "id": "http://jsonschema.net/vendor_software_version",
-      "type": "string"
-    },
-    "vendor_message_id": {
-      "id": "http://jsonschema.net/vendor_message_id",
-      "type": "string"
-    },
-    "vtr_serial_number": {
-      "id": "http://jsonschema.net/vtr_serial_number",
-      "type": "integer"
-    },
-    "asm_obs_indicator": {
-      "id": "http://jsonschema.net/asm_obs_indicator",
-      "type": "integer"
-    },
-    "total_hauls": {
-      "id": "http://jsonschema.net/total_hauls",
-      "type": "integer"
-    },
-    "reviewed_hauls": {
-      "id": "http://jsonschema.net/reviewed_hauls",
-      "type": "integer"
-    },
-    "hauls": {
-      "id": "http://jsonschema.net/hauls",
-      "type": "array",
-      "items": {
-        "id": "http://jsonschema.net/hauls/0",
-        "type": "object",
-        "properties": {
-          "haul_datetime": {
-            "id": "http://jsonschema.net/hauls/0/haul_datetime",
-            "type": "integer"
-          },
-          "vessel_specific_events": {
-            "id": "http://jsonschema.net/hauls/0/vessel_specific_events",
-            "type": "integer"
-          },
-          "crew_specific_event": {
-            "id": "http://jsonschema.net/hauls/0/crew_specific_event",
-            "type": "integer"
-          },
-          "em_specific_events": {
-            "id": "http://jsonschema.net/hauls/0/em_specific_events",
-            "type": "integer"
-          },
-          "image_quality": {
-            "id": "http://jsonschema.net/hauls/0/image_quality",
-            "type": "string"
-          },
-          "image_quality_reason": {
-            "id": "http://jsonschema.net/hauls/0/image_quality_reason",
-            "type": "integer"
-          },
-          "comments": {
-            "id": "http://jsonschema.net/hauls/0/comments",
-            "type": "string"
-          },
-          "number_rows_of_catch": {
-            "id": "http://jsonschema.net/hauls/0/number_rows_of_catch",
-            "type": "integer"
-          },
-          "catch": {
-            "id": "http://jsonschema.net/hauls/0/catch",
-            "type": "array",
-            "items": [
-              {
-                "id": "http://jsonschema.net/hauls/0/catch/0",
-                "type": "object",
-                "properties": {
-                  "species": {
-                    "id": "http://jsonschema.net/hauls/0/catch/0/species",
-                    "type": "string"
-                  },
-                  "count_discarded": {
-                    "id": "http://jsonschema.net/hauls/0/catch/0/count_discarded",
-                    "type": "integer"
-                  },
-                  "pounds_discarded": {
-                    "id": "http://jsonschema.net/hauls/0/catch/0/pounds_discarded",
-                    "type": "integer"
-                  }
-                }
+    "fishery": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "name_fr": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "teaser": {
+          "type": "string"
+        },
+        "multimedia_url": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer"
+        },
+        "area": {
+          "type": "integer"
+        },
+        "organization": {
+          "type": "null"
+        },
+        "certifications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
               },
-              {
-                "id": "http://jsonschema.net/hauls/0/catch/1",
-                "type": "object",
-                "properties": {
-                  "species": {
-                    "id": "http://jsonschema.net/hauls/0/catch/1/species",
-                    "type": "string"
-                  },
-                  "count_discarded": {
-                    "id": "http://jsonschema.net/hauls/0/catch/1/count_discarded",
-                    "type": "integer"
-                  },
-                  "pounds_discarded": {
-                    "id": "http://jsonschema.net/hauls/0/catch/1/pounds_discarded",
-                    "type": "integer"
-                  }
-                }
+              "name": {
+                "type": "string"
               },
-              {
-                "id": "http://jsonschema.net/hauls/0/catch/2",
-                "type": "object",
-                "properties": {
-                  "species": {
-                    "id": "http://jsonschema.net/hauls/0/catch/2/species",
-                    "type": "string"
-                  },
-                  "count_discarded": {
-                    "id": "http://jsonschema.net/hauls/0/catch/2/count_discarded",
-                    "type": "integer"
-                  },
-                  "pounds_discarded": {
-                    "id": "http://jsonschema.net/hauls/0/catch/2/pounds_discarded",
-                    "type": "integer"
-                  }
-                }
+              "name_fr": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
               }
+            },
+            "required": [
+              "id",
+              "name",
+              "name_fr",
+              "url"
             ]
           }
+        },
+        "landing_locations": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
         }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_fr",
+        "slug",
+        "teaser",
+        "multimedia_url",
+        "type",
+        "area",
+        "organization",
+        "certifications",
+        "landing_locations"
+      ]
+    },
+    "fh_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "created_by": {
+            "type": "integer"
+          },
+          "user": {
+            "type": "string"
+          },
+          "start_tag": {
+            "type": "string"
+          },
+          "end_tag": {
+            "type": "string"
+          },
+          "vessel": {
+            "type": "integer"
+          },
+          "fishery": {
+            "type": "integer"
+          },
+          "fish": {
+            "type": "integer"
+          },
+          "product_state": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_fr": {
+                "type": "string"
+              },
+              "group": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "name_fr",
+              "group"
+            ]
+          },
+          "handling": {
+            "type": "null"
+          },
+          "amount": {
+            "type": "integer"
+          },
+          "entry_unit": {
+            "type": "integer"
+          },
+          "stat_area": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "mgnt_area": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_fr": {
+                "type": "string"
+              },
+              "area": {
+                "type": "null"
+              },
+              "description": {
+                "type": "string"
+              },
+              "description_fr": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "geom": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "mgnt_area",
+              "name",
+              "name_fr",
+              "area",
+              "description",
+              "description_fr",
+              "url",
+              "geom"
+            ]
+          },
+          "receipt_date": {
+            "type": "string"
+          },
+          "ship_date": {
+            "type": "string"
+          },
+          "landing_location": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_fr": {
+                "type": "string"
+              },
+              "radius": {
+                "type": "null"
+              },
+              "location": {
+                "type": "string"
+              },
+              "region": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "name_fr",
+              "radius",
+              "location",
+              "region"
+            ]
+          },
+          "landing_slip_number": {
+            "type": "null"
+          },
+          "privacy_display_date": {
+            "type": "integer"
+          },
+          "shipped_to_user": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "created_by",
+          "user",
+          "start_tag",
+          "end_tag",
+          "vessel",
+          "fishery",
+          "fish",
+          "product_state",
+          "handling",
+          "amount",
+          "entry_unit",
+          "stat_area",
+          "receipt_date",
+          "ship_date",
+          "landing_location",
+          "landing_slip_number",
+          "privacy_display_date",
+          "shipped_to_user",
+          "description"
+        ]
+      }
+    },
+    "ind_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "created_by": {
+            "type": "integer"
+          },
+          "user": {
+            "type": "string"
+          },
+          "group": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ]
+          },
+          "start_trans": {
+            "type": "null"
+          },
+          "end_trans": {
+            "type": "null"
+          },
+          "received_from_user": {
+            "type": "integer"
+          },
+          "receipt_date": {
+            "type": "string"
+          },
+          "trans_date": {
+            "type": "null"
+          },
+          "trans_end_date": {
+            "type": "null"
+          },
+          "location": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "geocode_cache": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "province_other": {
+                "type": "string"
+              },
+              "province": {
+                "type": "integer"
+              },
+              "country": {
+                "type": "string"
+              },
+              "profile": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "id",
+              "created",
+              "name",
+              "geocode_cache",
+              "image",
+              "address",
+              "city",
+              "province_other",
+              "province",
+              "country",
+              "profile"
+            ]
+          },
+          "lot_number": {
+            "type": "string"
+          },
+          "start_tag": {
+            "type": "string"
+          },
+          "end_tag": {
+            "type": "string"
+          },
+          "product_state": {
+            "type": "null"
+          },
+          "handling": {
+            "type": "null"
+          },
+          "trade_unit": {
+            "type": "null"
+          },
+          "amount": {
+            "type": "integer"
+          },
+          "entry_unit": {
+            "type": "integer"
+          },
+          "privacy_display_date": {
+            "type": "integer"
+          },
+          "shipped_to_user": {
+            "type": "null"
+          },
+          "ship_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "created_by",
+          "user",
+          "group",
+          "start_trans",
+          "end_trans",
+          "received_from_user",
+          "receipt_date",
+          "trans_date",
+          "trans_end_date",
+          "location",
+          "lot_number",
+          "start_tag",
+          "end_tag",
+          "product_state",
+          "handling",
+          "trade_unit",
+          "amount",
+          "entry_unit",
+          "privacy_display_date",
+          "shipped_to_user",
+          "ship_date",
+          "description"
+        ]
       }
     }
   },
   "required": [
-    "vessel_name",
-    "vessel_permit_number",
-    "vendor_id",
-    "vendor_software_version",
-    "vendor_message_id",
-    "vtr_serial_number",
-    "asm_obs_indicator",
-    "total_hauls",
-    "reviewed_hauls",
-    "hauls"
+    "fh",
+    "fish",
+    "fishery",
+    "fh_events",
+    "ind_events"
   ]
 }
