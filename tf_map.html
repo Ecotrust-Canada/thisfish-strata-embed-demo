@@ -8,16 +8,41 @@
       <link type="text/css" rel="stylesheet" href="css/tf_map.css">
       <script src="js/jquery.min.js"></script>
       <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+      <style>
+        body {
+          margin: 0 auto;
+          text-align: center;
+          font-family: Helvetica, Arial, sans-serif;
+        }
+        .summary {
+          text-align: center;
+          margin: 0 auto;
+          font-size: 14px;
+        }
+        .summary p {
+          font-size: 14px;
+        }
+        #wrap {
+          margin: 0 auto;
+        }
+        #map_container {
+          left: 50%;
+          position: absolute;
+          margin-left: -200px;
+        }
+      </style>
   </head>
   <body>
-    <h1>ThisFish Json Map Demo</h1>
+    <h1>ThisFish JSON Map Demo</h1>
     <form name="tfinfo">
       <label for="code">ENTER CODE</label>
-      <input type="text" id="code">
+      <input type="text" id="code" value="P082001">
       <button id="tf">Trace</button>
     </form>
     <div class="summary"></div>
+    <div id="wrap">
     <div id="map_container"></div>
+    </div>
     <script src="http://leaflet.github.io/Leaflet.label/leaflet.label.js"></script>
     <script src="js/tf_map_summary.js"></script>
   </body>
