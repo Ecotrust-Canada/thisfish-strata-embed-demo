@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "vessel_name": {
+      "id": "http://jsonschema.net/vessel_name",
+      "type": "string"
+    },
+    "vessel_permit_number": {
+      "id": "http://jsonschema.net/vessel_permit_number",
+      "type": "integer"
+    },
+    "vendor_id": {
+      "id": "http://jsonschema.net/vendor_id",
+      "type": "integer"
+    },
+    "vendor_software_version": {
+      "id": "http://jsonschema.net/vendor_software_version",
+      "type": "string"
+    },
+    "vendor_message_id": {
+      "id": "http://jsonschema.net/vendor_message_id",
+      "type": "string"
+    },
+    "vtr_serial_number": {
+      "id": "http://jsonschema.net/vtr_serial_number",
+      "type": "integer"
+    },
+    "asm_obs_indicator": {
+      "id": "http://jsonschema.net/asm_obs_indicator",
+      "type": "integer"
+    },
+    "total_hauls": {
+      "id": "http://jsonschema.net/total_hauls",
+      "type": "integer"
+    },
+    "reviewed_hauls": {
+      "id": "http://jsonschema.net/reviewed_hauls",
+      "type": "integer"
+    },
+    "hauls": {
+      "id": "http://jsonschema.net/hauls",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/hauls/0",
+        "type": "object",
+        "properties": {
+          "haul_datetime": {
+            "id": "http://jsonschema.net/hauls/0/haul_datetime",
+            "type": "integer"
+          },
+          "vessel_specific_events": {
+            "id": "http://jsonschema.net/hauls/0/vessel_specific_events",
+            "type": "integer"
+          },
+          "crew_specific_event": {
+            "id": "http://jsonschema.net/hauls/0/crew_specific_event",
+            "type": "integer"
+          },
+          "em_specific_events": {
+            "id": "http://jsonschema.net/hauls/0/em_specific_events",
+            "type": "integer"
+          },
+          "image_quality": {
+            "id": "http://jsonschema.net/hauls/0/image_quality",
+            "type": "string"
+          },
+          "image_quality_reason": {
+            "id": "http://jsonschema.net/hauls/0/image_quality_reason",
+            "type": "integer"
+          },
+          "comments": {
+            "id": "http://jsonschema.net/hauls/0/comments",
+            "type": "string"
+          },
+          "number_rows_of_catch": {
+            "id": "http://jsonschema.net/hauls/0/number_rows_of_catch",
+            "type": "integer"
+          },
+          "catch": {
+            "id": "http://jsonschema.net/hauls/0/catch",
+            "type": "array",
+            "items": [
+              {
+                "id": "http://jsonschema.net/hauls/0/catch/0",
+                "type": "object",
+                "properties": {
+                  "species": {
+                    "id": "http://jsonschema.net/hauls/0/catch/0/species",
+                    "type": "string"
+                  },
+                  "count_discarded": {
+                    "id": "http://jsonschema.net/hauls/0/catch/0/count_discarded",
+                    "type": "integer"
+                  },
+                  "pounds_discarded": {
+                    "id": "http://jsonschema.net/hauls/0/catch/0/pounds_discarded",
+                    "type": "integer"
+                  }
+                }
+              },
+              {
+                "id": "http://jsonschema.net/hauls/0/catch/1",
+                "type": "object",
+                "properties": {
+                  "species": {
+                    "id": "http://jsonschema.net/hauls/0/catch/1/species",
+                    "type": "string"
+                  },
+                  "count_discarded": {
+                    "id": "http://jsonschema.net/hauls/0/catch/1/count_discarded",
+                    "type": "integer"
+                  },
+                  "pounds_discarded": {
+                    "id": "http://jsonschema.net/hauls/0/catch/1/pounds_discarded",
+                    "type": "integer"
+                  }
+                }
+              },
+              {
+                "id": "http://jsonschema.net/hauls/0/catch/2",
+                "type": "object",
+                "properties": {
+                  "species": {
+                    "id": "http://jsonschema.net/hauls/0/catch/2/species",
+                    "type": "string"
+                  },
+                  "count_discarded": {
+                    "id": "http://jsonschema.net/hauls/0/catch/2/count_discarded",
+                    "type": "integer"
+                  },
+                  "pounds_discarded": {
+                    "id": "http://jsonschema.net/hauls/0/catch/2/pounds_discarded",
+                    "type": "integer"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "vessel_name",
+    "vessel_permit_number",
+    "vendor_id",
+    "vendor_software_version",
+    "vendor_message_id",
+    "vtr_serial_number",
+    "asm_obs_indicator",
+    "total_hauls",
+    "reviewed_hauls",
+    "hauls"
+  ]
+}

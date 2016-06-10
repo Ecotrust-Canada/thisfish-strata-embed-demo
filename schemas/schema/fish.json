@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "example": "https://raw.githubusercontent.com/Ecotrust-Canada/commercial-fishing-rfc/master/video-review/example.json",
+  "properties": {
+    "num_hauls_observed": {
+      "id": "http://jsonschema.net/num_hauls_observed",
+      "type": "integer"
+    },
+    "num_hauls_trip": {
+      "id": "http://jsonschema.net/num_hauls_trip",
+      "type": "integer"
+    },
+    "hauls": {
+      "id": "http://jsonschema.net/hauls",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/hauls/0",
+        "type": "object",
+        "properties": {
+          "notes": {
+            "id": "http://jsonschema.net/hauls/0/notes",
+            "type": "string"
+          },
+          "amount": {
+            "id": "http://jsonschema.net/hauls/0/amount",
+            "type": "integer"
+          },
+          "weight": {
+            "id": "http://jsonschema.net/hauls/0/weight",
+            "type": "integer"
+          },
+          "units": {
+            "id": "http://jsonschema.net/hauls/0/units",
+            "type": "string"
+          },
+          "species": {
+            "id": "http://jsonschema.net/hauls/0/species",
+            "type": "string"
+          },
+          "location": {
+            "id": "http://jsonschema.net/hauls/0/location",
+            "type": "object",
+            "properties": {
+              "lat": {
+                "id": "http://jsonschema.net/hauls/0/location/lat",
+                "type": "number"
+              },
+              "lng": {
+                "id": "http://jsonschema.net/hauls/0/location/lng",
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "num_hauls_observed",
+    "num_hauls_trip",
+    "hauls"
+  ]
+}
