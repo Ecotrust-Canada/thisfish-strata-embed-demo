@@ -1,6 +1,11 @@
 $( document ).ready(function() {
      var host = "http://stage.thisfish.info";
      //var host = "http://localhost:8000";
+     $.ajaxSetup({
+       headers: {
+         'Authorization': "Token 88ca8633a8472a3b037a0925034bd41bc079d4c2"
+        }
+     }); 
      GROUP_ACTION_PHRASE = {
          'Fleet': 'caught',
          'Fish Harvester': 'caught',
