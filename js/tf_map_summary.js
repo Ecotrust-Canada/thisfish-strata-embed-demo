@@ -42,7 +42,8 @@ $( document ).ready(function() {
            if (data.fh_events && data.fh_events.length){
              var results_bits = [
                "<p>Your ", data.fish.name," was harvested by ",
-               data.fh_events[0].user, " ",
+               (data.fh_events[0].user.profile ? data.fh_events[0].user.profile.title || data.fh_events[0].user.profile.full_name
+                    : data.fh_events[0].user.username), " ",
                data.fh_events[0].stat_area.description,
                " and landed ",  data.fh_events[0].product_state.name," in ",
                data.fh_events[0].landing_location.name,"</p>"
